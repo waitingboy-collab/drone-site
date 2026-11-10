@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radoslav Aerial Videography – Крумовград отгоре</title>
+<meta name="description" content="Въздушно видео от Крумовград и Източните Родопи. Дрон пилот с сертификат A1/A3 – Радослав Чакъров.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Radoslav Aerial Videography – Крумовград отгоре">
+<meta property="og:description" content="Въздушно видео от Крумовград и Източните Родопи с FIMI X8SE и DJI Avata.">
+<meta name="theme-color" content="#EFF3F4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --mist:#EFF3F4;
+    --paper:#FFFFFF;
+    --ink:#13232C;
+    --slate:#4A5B64;
+    --pine:#1E5245;
+    --amber:#F5B700;
+    --line:#D3DDE0;
+    --display:"Unbounded",system-ui,sans-serif;
+    --body:"Onest",system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+    --wrap:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--mist);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  img,iframe{display:block;max-width:100%}
+  :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(239,243,244,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+  .brand{font-family:var(--display);font-weight:600;font-size:.95rem;text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+  .brand-dot{width:10px;height:10px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 4px rgba(245,183,0,.25)}
+  nav ul{display:flex;gap:28px;list-style:none}
+  nav a{text-decoration:none;color:var(--slate);font-weight:500;font-size:.95rem}
+  nav a:hover{color:var(--ink)}
+  .lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--paper)}
+  .lang button{font:600 .8rem var(--body);border:0;background:transparent;color:var(--slate);padding:6px 12px;border-radius:999px;cursor:pointer}
+  .lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+  /* Hero */
+  .hero{position:relative;overflow:hidden;padding:96px 0 72px}
+  .contours{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
+    -webkit-mask-image:linear-gradient(100deg,transparent 15%,#000 60%);mask-image:linear-gradient(100deg,transparent 15%,#000 60%)}
+  .contours g{animation:drift 60s linear infinite alternate}
+  @keyframes drift{to{transform:translateX(-120px)}}
+  .hero .wrap{position:relative}
+  h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,8vw,6.4rem);line-height:.98;letter-spacing:-.035em;max-width:12ch}
+  .lead{margin-top:28px;max-width:46ch;font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--slate)}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font:600 1rem var(--body);text-decoration:none;padding:15px 24px;border-radius:999px;border:1.5px solid var(--ink);transition:background .2s,color .2s}
+  .btn-solid{background:var(--ink);color:var(--paper)}
+  .btn-solid:hover{background:var(--pine);border-color:var(--pine)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .btn svg{width:20px;height:20px;flex:none}
+
+  .hud{display:flex;flex-wrap:wrap;gap:0;margin-top:64px;border:1px solid var(--line);background:rgba(255,255,255,.7);border-radius:14px;width:max-content;max-width:100%}
+  .hud div{padding:14px 22px;border-right:1px solid var(--line)}
+  .hud div:last-child{border-right:0}
+  .hud small{display:block;font-size:.78rem;color:var(--slate)}
+  .hud b{font-family:var(--mono);font-weight:500;font-size:1.05rem;white-space:nowrap}
+  .hud .alt b{color:var(--pine)}
+
+  /* Sections */
+  section{padding:96px 0}
+  h2{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.08;letter-spacing:-.025em;max-width:18ch}
+  .section-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px;margin-bottom:40px}
+  .section-head p{color:var(--slate);max-width:42ch}
+
+  /* Video */
+  #video{background:var(--ink);color:var(--paper)}
+  #video .section-head p{color:#AFC0C7}
+  .frame{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#0d1a21;box-shadow:0 30px 80px -30px rgba(0,0,0,.6)}
+  .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:22px;color:#AFC0C7;font-size:.95rem}
+  .video-foot a{color:var(--paper);font-weight:600;text-underline-offset:4px}
+  #video .btn{border-color:var(--paper);color:var(--paper)}
+  #video .btn:hover{background:var(--paper);color:var(--ink)}
+
+  /* About */
+  .about{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}
+  .about-text p{margin-top:20px;max-width:58ch}
+  .facts{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:8px 28px}
+  .facts dl div{padding:20px 0;border-bottom:1px solid var(--line)}
+  .facts dl div:last-child{border-bottom:0}
+  .facts dt{font-size:.85rem;color:var(--slate)}
+  .facts dd{font-weight:600;font-size:1.1rem;margin-top:2px}
+  .facts dd span{display:block;font-weight:400;font-size:.95rem;color:var(--slate)}
+
+  /* Services */
+  #services{background:var(--paper);border-block:1px solid var(--line)}
+  .services{list-style:none;border-top:1.5px solid var(--ink)}
+  .services li{display:grid;grid-template-columns:minmax(200px,1fr) 2fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--line)}
+  .services h3{font-family:var(--display);font-weight:600;font-size:1.2rem;letter-spacing:-.01em}
+  .services p{color:var(--slate);max-width:60ch}
+
+  /* Contact */
+  .contact-lines{display:flex;flex-direction:column;gap:8px;margin-top:36px}
+  .contact-lines a{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,5vw,3.4rem);letter-spacing:-.03em;text-decoration:none;line-height:1.15;width:max-content;max-width:100%;overflow-wrap:anywhere;background:linear-gradient(var(--amber),var(--amber)) 0 92%/0 .18em no-repeat;transition:background-size .3s}
+  .contact-lines a:hover{background-size:100% .18em}
+  #contact .actions{margin-top:44px}
+
+  footer{padding:32px 0;border-top:1px solid var(--line);color:var(--slate);font-size:.9rem}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+  @media (max-width:860px){
+    nav ul{display:none}
+    .about{grid-template-columns:1fr;gap:40px}
+    .services li{grid-template-columns:1fr;gap:6px}
+    section{padding:72px 0}
+    .hero{padding:64px 0 56px}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 16px}
+    .brand{font-size:.78rem;gap:8px}
+    .hud{width:100%;flex-wrap:nowrap}
+    .hud div{flex:1 1 33%;padding:12px 10px;min-width:0}
+    .hud b{font-size:.86rem;white-space:nowrap}
+    .hud small{font-size:.72rem}
+    .btn{width:100%;justify-content:center}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .contours g{animation:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top"><span class="brand-dot" aria-hidden="true"></span><span class="brand-text">Radoslav Aerial Videography</span></a>
+    <nav aria-label="Основна навигация">
+      <ul>
+        <li><a href="#video" data-i18n="nav_video">Видео</a></li>
+        <li><a href="#about" data-i18n="nav_about">За мен</a></li>
+        <li><a href="#services" data-i18n="nav_services">Услуги</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Контакти</a></li>
+      </ul>
+    </nav>
+    <div class="lang" role="group" aria-label="Език / Language">
+      <button type="button" data-lang="bg" aria-pressed="true">БГ</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <svg class="contours" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g id="contourGroup"></g></svg>
+    <div class="wrap">
+      <h1 data-i18n-html="hero_title">Крумовград,<br>заснет отгоре.</h1>
+      <p class="lead" data-i18n="hero_lead">Въздушно видео от Източните Родопи – реката, хълмовете и хората на Крумовград, заснети с FIMI X8SE и FPV дрон DJI Avata.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="#video" data-i18n="hero_cta">Гледай клиповете</a>
+        <a class="btn btn-ghost" href="https://www.youtube.com/@digitalsolution-o6q" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8ZM9.8 15.1V8.9l5.7 3.1-5.7 3.1Z"/></svg>
+          <span data-i18n="yt_channel">YouTube канал</span>
+        </a>
+      </div>
+      <div class="hud" aria-label="Координати на Крумовград">
+        <div><small data-i18n="hud_lat">Ширина</small><b>N 41.471°</b></div>
+        <div><small data-i18n="hud_lon">Дължина</small><b>E 25.654°</b></div>
+        <div class="alt"><small data-i18n="hud_alt">Височина на полета</small><b><span id="alt">120</span> m</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="video_title">Клиповете</h2>
+        <p data-i18n="video_lead">Целият плейлист е тук. Използвай бутона за списъка в горния десен ъгъл на плейъра, за да избереш клип.</p>
+      </div>
+      <div class="frame">
+        <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLi3runv8BFi9bDQLby6vUMUa17ihACh4v"
+          title="Radoslav Aerial Videography – плейлист" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="video-foot">
+        <a href="https://www.youtube.com/playlist?list=PLi3runv8BFi9bDQLby6vUMUa17ihACh4v" target="_blank" rel="noopener" data-i18n="video_open">Отвори плейлиста в YouTube</a>
+        <a href="https://www.youtube.com/@digitalsolution-o6q?sub_confirmation=1" target="_blank" rel="noopener" data-i18n="video_sub">Абонирай се за канала</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="about-text">
+        <h2 data-i18n="about_title">Пилотът зад кадрите</h2>
+        <p data-i18n="about_p1">Аз съм Радослав Чакъров, дрон пилот и разработчик от Крумовград. Снимам родния край от въздуха и монтирам всеки клип сам.</p>
+        <p data-i18n="about_p2">Летя със сертификат A1/A3 и спазвам правилата за безопасни полети. Ако имате място, събитие или бизнес, който заслужава да бъде видян отгоре, пишете ми.</p>
+      </div>
+      <div class="facts">
+        <dl>
+          <div><dt data-i18n="f_cert_t">Сертификат</dt><dd>A1/A3 <span data-i18n="f_cert_d">Отворена категория, ЕС</span></dd></div>
+          <div><dt data-i18n="f_cine_t">Кинематографски кадри</dt><dd>FIMI X8SE 2022 V2 <span data-i18n="f_cine_d">Плавни панорами и високи гледки</span></dd></div>
+          <div><dt data-i18n="f_fpv_t">FPV полети</dt><dd>DJI Avata <span data-i18n="f_fpv_d">Динамични кадри от ниско и отблизо</span></dd></div>
+          <div><dt data-i18n="f_base_t">База</dt><dd data-i18n="f_base_d">Крумовград, Източни Родопи</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="services_title">Какво мога да заснема за вас</h2>
+      </div>
+      <ul class="services">
+        <li><h3 data-i18n="s1_t">Събития</h3><p data-i18n="s1_d">Сватби, събори, фестивали и спортни събития – общата картина, която не се вижда от земята.</p></li>
+        <li><h3 data-i18n="s2_t">Имоти и строителство</h3><p data-i18n="s2_d">Представяне на имоти за продажба и проследяване на напредъка на строителни обекти.</p></li>
+        <li><h3 data-i18n="s3_t">Туризъм</h3><p data-i18n="s3_d">Къщи за гости, хижи и забележителности в региона, заснети така, че да привличат посетители.</p></li>
+        <li><h3 data-i18n="s4_t">Реклама за бизнеса</h3><p data-i18n="s4_d">Кадри за сайт, социални мрежи и YouTube, монтирани и готови за публикуване.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2 data-i18n="contact_title">Да полетим заедно</h2>
+      <div class="contact-lines">
+        <a href="tel:+359878929083">0878 929 083</a>
+        <a href="mailto:waitingboy@gmail.com">waitingboy@gmail.com</a>
+      </div>
+      <div class="actions">
+        <a class="btn btn-solid" href="https://www.youtube.com/@digitalsolution-o6q" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8ZM9.8 15.1V8.9l5.7 3.1-5.7 3.1Z"/></svg>
+          <span data-i18n="yt_channel">YouTube канал</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Radoslav Aerial Videography</span>
+    <span data-i18n="footer_loc">Крумовград, България</span>
+  </div>
+</footer>
+
+<script>
+  // ---- Contour lines (Rhodope-style topography) ----
+  (function(){
+    var g=document.getElementById('contourGroup'), NS='http://www.w3.org/2000/svg';
+    for(var i=0;i<18;i++){
+      var base=30+i*42, d='';
+      for(var x=-80;x<=1600;x+=20){
+        var y=base
+          +Math.sin(x/210+i*0.22)*34
+          +Math.sin(x/97+i*0.5)*12
+          +Math.cos(x/420-i*0.15)*48;
+        d+=(x===-80?'M':'L')+x+' '+y.toFixed(1)+' ';
+      }
+      var p=document.createElementNS(NS,'path');
+      p.setAttribute('d',d);
+      p.setAttribute('fill','none');
+      var strong=i%5===2;
+      p.setAttribute('stroke',strong?'#1E5245':'#9FB3B9');
+      p.setAttribute('stroke-width',strong?'1.6':'1');
+      p.setAttribute('opacity',strong?'0.55':'0.6');
+      g.appendChild(p);
+    }
+  })();
+
+  // ---- Altitude readout (counts up once on load) ----
+  (function(){
+    var el=document.getElementById('alt');
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var start=null, dur=1800;
+    el.textContent='0';
+    function tick(t){
+      if(!start) start=t;
+      var k=Math.min((t-start)/dur,1), e=1-Math.pow(1-k,3);
+      el.textContent=Math.round(e*120);
+      if(k<1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // ---- BG / EN ----
+  var T={
+    en:{
+      nav_video:"Videos",nav_about:"About",nav_services:"Services",nav_contact:"Contact",
+      hero_title:"Krumovgrad,<br>seen from above.",
+      hero_lead:"Aerial video from the Eastern Rhodopes – the river, the hills and the people of Krumovgrad, filmed with a FIMI X8SE and a DJI Avata FPV drone.",
+      hero_cta:"Watch the videos",yt_channel:"YouTube channel",
+      hud_lat:"Latitude",hud_lon:"Longitude",hud_alt:"Flight altitude",
+      video_title:"The videos",
+      video_lead:"The whole playlist is here. Use the list button in the top-right corner of the player to pick a video.",
+      video_open:"Open the playlist on YouTube",video_sub:"Subscribe to the channel",
+      about_title:"The pilot behind the shots",
+      about_p1:"I'm Radoslav Chakarov, a drone pilot and developer from Krumovgrad, Bulgaria. I film my home region from the air and edit every video myself.",
+      about_p2:"I fly with an A1/A3 certificate and follow the rules for safe flights. If you have a place, an event or a business worth seeing from above, get in touch.",
+      f_cert_t:"Certificate",f_cert_d:"EU Open category",
+      f_cine_t:"Cinematic shots",f_cine_d:"Smooth pans and high views",
+      f_fpv_t:"FPV flights",f_fpv_d:"Dynamic low, close-up shots",
+      f_base_t:"Based in",f_base_d:"Krumovgrad, Eastern Rhodopes",
+      services_title:"What I can film for you",
+      s1_t:"Events",s1_d:"Weddings, fairs, festivals and sports events – the full picture you can't see from the ground.",
+      s2_t:"Property and construction",s2_d:"Showcasing properties for sale and tracking progress on construction sites.",
+      s3_t:"Tourism",s3_d:"Guesthouses, lodges and landmarks in the region, filmed to bring in visitors.",
+      s4_t:"Business promotion",s4_d:"Footage for websites, social media and YouTube, edited and ready to publish.",
+      contact_title:"Let's fly together",footer_loc:"Krumovgrad, Bulgaria"
+    }
+  };
+  // Save Bulgarian originals from the page
+  T.bg={};
+  document.querySelectorAll('[data-i18n]').forEach(function(el){T.bg[el.dataset.i18n]=el.textContent});
+  document.querySelectorAll('[data-i18n-html]').forEach(function(el){T.bg[el.dataset.i18nHtml]=el.innerHTML});
+
+  function setLang(lang){
+    var d=T[lang];
+    document.querySelectorAll('[data-i18n]').forEach(function(el){ if(d[el.dataset.i18n]) el.textContent=d[el.dataset.i18n] });
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el){ if(d[el.dataset.i18nHtml]) el.innerHTML=d[el.dataset.i18nHtml] });
+    document.documentElement.lang=lang;
+    document.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lang===lang) });
+    try{ localStorage.setItem('lang',lang) }catch(e){}
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){ b.addEventListener('click',function(){ setLang(b.dataset.lang) }) });
+  try{ var saved=localStorage.getItem('lang'); if(saved==='en') setLang('en') }catch(e){}
+</script>
+</body>
+</html>
